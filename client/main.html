@@ -1,0 +1,71 @@
+<head>
+    <title>simple-todos-blaze</title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.blueopal.min.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2022.1.301/js/jquery.min.js"></script>
+</head>
+
+<body>
+<h1>Welcome to Meteor!</h1>
+
+{{> main}}
+<br />
+<br />
+<br />
+<hr />
+{{> hello}}
+{{> info}}
+</body>
+
+
+<template name="main">
+    <div style="display: flex">
+        <div class="table" style="width: 100%">
+            {{>table}}
+        </div>
+        <div class="form" style="width: 100%">
+            {{>form}}
+        </div>
+    </div>
+</template>
+
+<template name="table">
+    <div id="table"></div>
+</template>
+
+
+<template name="form">
+    <form class="k-form">
+        <input type="text" name="firstname"/>
+        <input type="text" name="lastname"/>
+        <input type="hidden" name="_id">
+        <input type="submit" value="Submit"/>
+    </form>
+</template>
+
+
+<template name="hello">
+    <button class="pocitadlo">Click Me</button>
+    <input type="number" class="mongoCount" />
+    <span class="counter">-</span>
+    <button class="mongoInsert">Mongo insert</button>
+    <button class="mongoDelete">Mongo delete</button>
+    <button class="mongoRead">Mongo read</button>
+    <button class="mongoCount">Mongo count</button>
+    <p>You've pressed the button {{counter}} times.</p>
+    <p>You've pressed the button {{pokus}} times.</p>
+    <textarea cols="20" rows="10" class="mongoSelector"></textarea>
+    <textarea cols="60" rows="40" class="mongoResult"></textarea>
+</template>
+
+
+<template name="info">
+    <h2>Learn Meteor!</h2>
+    <ul>
+        <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+        <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+        <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+        <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+    </ul>
+</template>
